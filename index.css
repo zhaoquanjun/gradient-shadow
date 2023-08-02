@@ -1,0 +1,28 @@
+.container {
+  --w: 200px;
+  --h: 300px;
+  --t: 10px;
+  --l: 10px;
+  position: relative;
+  margin: 100px auto;
+  width: var(--w);
+  height: var(--h);
+  outline: 1px solid #ccc;
+  background-color: transparent;
+}
+.container::after {
+  position: absolute;
+  left: var(--l);
+  top: var(--t);
+  display: block;
+  content: "";
+  width: var(--w);
+  height: var(--h);
+  color: #c61b90;
+  filter: blur(5px);
+  z-index: -1;
+  background-image: conic-gradient(skyblue, burlywood, #33ba75, #be2541, #c6c11b, #5c1bc6, #1b29c6, #c61b90);
+  clip-path: polygon(-100vmax -100vmax, 100vmax -100vmax, 100vmax 100vmax, -100vmax 100vmax, calc(0px - var(--l)) calc(0px - var(--t)), calc(0px - var(--l)) calc(100% - var(--t)), calc(100% - var(--l)) calc(100% - var(--t)), calc(100% - var(--l)) calc(0px - var(--t)));
+}
+
+/*# sourceMappingURL=index.css.map */
